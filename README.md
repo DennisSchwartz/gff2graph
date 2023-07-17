@@ -28,7 +28,7 @@ My main considerations were as follows:
 
 ### Flexibility 
 Any system which needs to get things perfect from the get-to is doomed to fail. Iteration and failing fast are key in my opinion. I want a system which can grow and change over time, where components can be replaced and upgraded.
-It should also not be locked into any specific vendor or environment - ideally a data pipeline can run on my laptop as well as on the cloud.
+It should also not be locked into any specific vendor or environment - ideally a data pipeline can run on my laptop as well as on any cloud provider.
 
 ### Scalability
 To continue on from the point above, using a tool like dagster allows relatively simple migration to bigger, cloud-based systems from a simple starting project. It integrates with things like dbt, Databricks etc.
@@ -61,12 +61,14 @@ There might be ways to use Docker containers directly with dagster such as you w
 have time to properly explore this in the time I had.
 As such, I had to install genometools manually and access it via Python which isn't ideal.
 
+Dagster is also a relative newcomer to the world of pipelining tools which can be a blessing and a curse when comparing it to other systems like Airflow. I prefer the flexibility of writing things in Python over something like CWL or Nextflow which are essentially a new language to learn and rely on sometimes hard to run orchestrators. But it also means a lot of bespoke code and a lot more Python rather than using Dockefiles our of the box as is common in CWL from my experience. (Which is admittedly a few years old).
 
 ## Advantages
 
-Software-defined data assets are a great way to specify which data should exist and materialise it when needed. 
-Using a tool like dagster allows us to track metadata and configurations of the runs, as well as logs and errors. It
-also allows for convenient scheduling in a variety of ways and can run both on my laptop and large, distributed cloud systems.
+Software-defined data assets are a great way to specify which data should exist and materialise it when needed. Using a tool like dagster allows us to track metadata and configurations of the runs, as well as logs and errors. It also allows for convenient scheduling in a variety of ways and can run both on my laptop and large, distributed cloud systems.  
+As mentioned above I enjoy the flexibility of implementation and configuration. It should be easy to deploy this system to cloud infrastructure, store logs and output files in object storage where files are under access control. It would also allow the tracking of any runs, who ran it, and when. It could store metadata around data sources and potential licenses which apply to them which is important for data governance.
+
+Another advantage is the ability to separate the version of the processing code from the version of the data and even run multiple versions in a single pipeline to ensure backwards compatibility.
 
 
 ## Running the example pipeline
