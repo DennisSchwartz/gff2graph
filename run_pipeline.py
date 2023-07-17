@@ -1,7 +1,7 @@
 from dagster import RunConfig
 
-from gff2graph.gff2graph import defs
-from gff2graph.gff2graph.assets import GFF2GraphConfig
+from dagster_pipeline.gff2graph import defs
+from dagster_pipeline.gff2graph.assets import GFF2GraphConfig
 
 gff2graph_job = defs.get_implicit_global_asset_job_def()
 
