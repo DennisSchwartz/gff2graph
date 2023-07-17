@@ -1,1 +1,6 @@
 .idea
+*.gff3
+*.jsonl
+*.pyc
+*.egg-info
+*.gff3.gz
