@@ -16,6 +16,8 @@ I like the theoretical scalability of Dagster to be able to run locally as well 
 
 
 I created a conceptual overview of a potential pipelining system as a [Lucidchart document](https://lucid.app/lucidchart/709e4fed-fe8c-4a0e-ac2b-53c2783d9019/edit?viewport_loc=-671%2C-572%2C4726%2C2341%2C0_0&invitationId=inv_a2c7e0b2-e606-46c4-ab8a-49511a162082), which I also added as a picture below:
+
+
 ![System Overview](img/system_diagram.png)
 
 
