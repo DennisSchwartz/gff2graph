@@ -4,7 +4,7 @@ A pipeline to load and transform plant genomes into graph format
 
 ## Concept
 
-This is an example implementation of a possible data pipeline built using dagster. 
+This is an example implementation of a possible data pipeline built using [dagster](https://dagster.io/). 
 There are many ways to do this depending on the existing systems and requirements, but I chose dagster because I like
 its mental model and wanted to use it for a while.
 A lot of my thinking around how to create up-to-date, well tracked data is coming from
