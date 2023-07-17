@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="gff2graph",
+    name="dagster_pipeline",
     packages=find_packages(exclude=["gff2graph_tests"]),
     install_requires=[
         "dagster",

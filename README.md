@@ -63,3 +63,9 @@ Software-defined data assets are a great way to specify which data should exist 
 Using a tool like dagster allows us to track metadata and configurations of the runs, as well as logs and errors. It
 also allows for convenient scheduling in a variety of ways and can run both on my laptop and large, distributed cloud systems.
 
+
+## Running the example pipeline
+To run the example pipeline in this project, you can either run it once in the command line, or use the Dagit UI
+to set up and trace runs and run configurations.
+
+### Installation

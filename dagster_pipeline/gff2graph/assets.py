@@ -1,7 +1,7 @@
 import datetime
 import os
 import re
-from typing import List
+from typing import List, Optional
 
 from gt.extended import FeatureIndexMemory
 from dagster import Config, Output, asset
@@ -18,7 +18,7 @@ class GFF2GraphConfig(Config):
     organism: str
     raw_genome_path: str = 'genomes/'
     graph_data_path: str = 'graph_data/'
-    chromosomes: List[str] = []
+    chromosomes: Optional[List[str]]
 
 
 @asset(code_version="1")
@@ -69,7 +69,7 @@ def graph_data(context, raw_genome, config: GFF2GraphConfig) -> None:
         os.makedirs(config.graph_data_path)
 
     now = datetime.datetime.now().isoformat()
-    base_file_name = f'{config.graph_data_path}/{now}_{context.run_id}'
+    base_file_name = f'{config.graph_data_path}/{now}_{context.run_id}_{config.organism}'
     entities_file = open(base_file_name + '_entities.jsonl', 'w')
     relationships_file = open(base_file_name + '_relationships.jsonl', 'w')
 
