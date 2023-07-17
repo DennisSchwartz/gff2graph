@@ -2,5 +2,5 @@
 *.gff3
 *.jsonl
 *.pyc
-*.egg-info
+*.egg-info/
 *.gff3.gz

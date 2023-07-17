@@ -2,8 +2,8 @@ from argparse import ArgumentParser
 
 from dagster import RunConfig
 
-from dagster_pipeline.gff2graph import defs
-from dagster_pipeline.gff2graph.assets import GFF2GraphConfig
+from gff2graph import defs
+from gff2graph import GFF2GraphConfig
 
 
 def run_pipeline(organism, chromosomes):

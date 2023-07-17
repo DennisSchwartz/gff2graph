@@ -7,7 +7,7 @@ from gt.extended import FeatureIndexMemory
 from dagster import Config, Output, asset
 from ftplib import FTP
 
-from dagster_pipeline.gff2graph.lib import transform_feature_recursive
+from gff2graph.lib import transform_feature_recursive
 
 
 class GFF2GraphConfig(Config):
